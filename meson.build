@@ -4,9 +4,9 @@ project('pacman',
         license : 'GPLv2+',
         default_options : [
           'c_std=gnu99',
-          'prefix=/usr',
-          'sysconfdir=/etc',
-          'localstatedir=/var',
+          'prefix=/opt/ps2pacman',
+          'sysconfdir=/opt/ps2pacman/etc',
+          'localstatedir=/opt/ps2pacman/var',
         ],
         meson_version : '>= 0.61')
 
@@ -369,7 +369,7 @@ pacman_bin = executable(
   'pacman',
   pacman_sources,
   include_directories : includes,
-  link_with : [libalpm, libcommon],
+  link_with : [libalpm_a, libcommon],
   dependencies : [libarchive],
   install : true,
 )
@@ -378,7 +378,7 @@ executable(
   'pacman-conf',
   pacman_conf_sources,
   include_directories : includes,
-  link_with : [libalpm, libcommon],
+  link_with : [libalpm_a, libcommon],
   dependencies : [libarchive],
   install : true,
 )

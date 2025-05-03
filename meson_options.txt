@@ -29,7 +29,7 @@ option('datarootdir', type : 'string', value : 'share',
 option('keyringdir', type : 'string', value: 'pacman/keyrings',
 	description : 'Where to look for keyring files under datarootdir')
 
-option('makepkg-template-dir', type : 'string', value : '/usr/share/makepkg-template',
+option('makepkg-template-dir', type : 'string', value : '/opt/ps2pacman/usr/share/makepkg-template',
        description : 'template dir used by makepkg-template')
 
 option('debug-suffix', type : 'string', value : 'debug',
